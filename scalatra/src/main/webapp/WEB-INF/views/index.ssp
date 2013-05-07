@@ -1,0 +1,18 @@
+<% import slicksupport._ %>
+<%@ val tasks: List[Task] %>
+<!DOCTYPE html>
+<html>
+<head><title>Scaltra Sample</title></head>
+<body>
+  <h1>Task list</h1>
+  <ul>
+  #for (task <- tasks)
+    <li><a href="/task/view/<%= task.id %>"><%= task.body %></a></li>
+  #end
+  </ul>
+  <form action="/task/add" method="post">
+    <input type="text" name="body" />
+    <input type="submit" value="add" />
+  </form>
+</body>
+</html>
