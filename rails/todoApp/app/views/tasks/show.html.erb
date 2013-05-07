@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Iscompleted:</b>
+  <%= @task.isCompleted %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @task.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
